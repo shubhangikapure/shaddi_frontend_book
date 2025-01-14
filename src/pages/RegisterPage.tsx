@@ -5,7 +5,7 @@ import logo from "../assets/images/logo.png";
 const RegisterPage: React.FC = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="flex items-center justify-center max-w-screen-xl w-full p-6">
+      <div className="flex items-center justify-center max-w-screen-xl w-full p-6 ">
         {/* Left side: Image */}
         <img
           src={logo}

@@ -1,23 +1,32 @@
+// LoginPage.tsx
 import React from "react";
-import LoginForm from "../features/auth/LoginForm";
-import logo from "../assets/images/logo.png";
+import Header from "../features/auth/Header";  // Ensure the correct path
+import Illustration from "../features/auth/Illustration";  // Ensure the correct path
+import LoginForm from "../features/auth/LoginForm";  // Ensure the correct path
 
 const LoginPage: React.FC = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="flex items-center justify-center max-w-screen-xl w-full p-6">
-        {/* Left side: Image */}
-        <img
-          src={logo}
-          alt="Illustration"
-          className="hidden md:block w-full max-w-md rounded-lg" // Set width and max-width, hidden on small screens
-        />
+    <div className="min-h-screen flex flex-col">
+      {/* Header */}
+      <Header />
 
-        {/* Right side: Login Form */}
-        <div className="w-full max-w-md ml-6">
-          <LoginForm />
+      {/* Main Content */}
+      <main className="flex flex-grow">
+        {/* Left Side */}
+        <Illustration />
+
+        {/* Right Side */}
+        <div className="w-full sm:w-1/2 bg-white flex items-center justify-center">
+          <div className="w-full max-w-md bg-white p-10 shadow-lg rounded-lg">
+            <LoginForm />
+          </div>
         </div>
-      </div>
+      </main>
+
+      {/* Footer */}
+      <footer className="text-center py-4 text-sm text-gray-400">
+        © LOGO 2023 All Rights Reserved.
+      </footer>
     </div>
   );
 };

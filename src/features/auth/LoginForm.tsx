@@ -1,28 +1,48 @@
+// LoginForm.tsx
 import React from "react";
-import Button from "../../components/Button";
-import Input from "../../components/Input";
+import FloatingInput from "../../features/auth/FloatingInput";  // Ensure the path is correct
 
 const LoginForm: React.FC = () => {
   return (
-    <div className="flex flex-col items-center p-6 max-w-md mx-auto bg-white shadow-lg rounded-lg">
-      <h2 className="text-2xl font-bold text-primary mb-4">Hello Again!</h2>
-      <form className="w-full">
-        <Input type="email" label="Email" placeholder="test@gmail.com" />
-        <Input type="password" label="Password" placeholder="Enter Password" />
-        <div className="flex justify-between items-center mb-4">
-          <label className="flex items-center">
+    <div className="max-w-md mx-auto text-center py-8">
+      {/* Page Title */}
+      <h1 className="text-2xl font-bold text-purple-800 mb-8">Welcome Back!</h1>
+
+      {/* Login Form */}
+      <form className="space-y-8">
+        {/* Email Field */}
+        <FloatingInput id="email" type="email" label="Email" />
+
+        {/* Password Field */}
+        <FloatingInput id="password" type="password" label="Password" />
+
+        {/* Options */}
+        <div className="flex items-center justify-between">
+          <label className="flex items-center text-sm">
             <input type="checkbox" className="mr-2" />
             Remember Me
           </label>
-          <a href="/recover" className="text-primary">Recovery Password</a>
+          <a href="#" className="text-purple-600 text-sm hover:underline">
+            Forgot Password?
+          </a>
         </div>
-        <Button type="submit" className="bg-purple-600 text-white hover:bg-purple-600">
+
+        {/* Login Button */}
+        <button
+          type="submit"
+          className="w-full py-2 px-4 bg-purple-600 text-white rounded-lg shadow-md hover:bg-purple-700"
+        >
           Login
-        </Button>
-        <div className="mt-4 text-center">
-          <p>
-            Don't have an account?{" "}
-            <a href="/register" className="text-primary">
+        </button>
+
+        {/* Additional Links */}
+        <div className="text-center mt-6">
+          <span className="text-gray-500">OR</span>
+        </div>
+        <div className="text-center mt-4">
+          <p className="text-sm text-gray-500">
+            Don’t have an Account?{' '}
+            <a href="#" className="text-purple-600 hover:underline">
               Create Account
             </a>
           </p>
