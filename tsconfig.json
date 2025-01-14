@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src", // Set the base URL for your project
+    "paths": {
+      "@components/*": ["components/*"], // Alias for components folder
+      "@utils/*": ["utils/*"],          // Alias for utils folder
+      "@pages/*": ["pages/*"],          // Alias for pages folder
+      "@styles/*": ["styles/*"]         // Alias for styles folder
+    },
+    "jsx": "react-jsx",
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "include": ["src"]
+}
